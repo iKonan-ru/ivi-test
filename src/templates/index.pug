@@ -4,8 +4,8 @@ html
         meta(charset='UTF-8')
         link(rel='stylesheet', href='styles.css')
     body
-        .page
-            .page__topBlock.topBlock
+        article.page
+            section.page__topBlock.topBlock
                 .topBlock__skew
                 .topBlock__content
                     .topBlock__contentInner
@@ -13,7 +13,7 @@ html
                     ul.topBlock__quality.quality
                         each item in ['360p', '720p', 'HD', 'Full HD', '4k']
                             li.quality__item= item
-            .page__listBlock.listBlock
+            section.page__listBlock.listBlock
                 ol.listBlock__list
                     each item in ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.']
                         li.listBlock__item: span.listBlock__itemText= item

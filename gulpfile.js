@@ -11,12 +11,12 @@ gulp.task('css', () => {
         .pipe(stylus({
             use: [autoprefixer({
                 browsers: [
-                    'Explorer >= 8',
+                    'Explorer >= 9',
                     'Edge >= 12',
                     'Opera >= 10.7',
-                    'Firefox >= 22',
+                    'Firefox >= 3.5',
                     'Chrome >= 20',
-                    'Safari >= 6',
+                    'Safari >= 5',
                     'Android >= 4',
                     'iOS >= 7'
                 ],
@@ -24,7 +24,7 @@ gulp.task('css', () => {
                 remove: false
             })]
         }))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(cleanCSS({compatibility: 'ie9'}))
         .pipe(gulp.dest('./dst/'))
 });
 

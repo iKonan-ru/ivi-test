@@ -1,12 +1,16 @@
 @import '_vars.styl'
 @import '_mixins.styl'
 
-html
+html,
+body
   height: 100%
+  margin: 0
+  padding: 0
 
 body
   font-family: 'Arial', sans-serif
   background-image: linear-gradient(45deg, alpha($color_white, 0) 0%, alpha($color_pink, 0.3) 100%)
+  background-attachment: fixed
 
 ul, ol
   list-style: none
@@ -87,7 +91,6 @@ h1
 /* Базовые стили списка качества */
 .quality
   height: $quality__height
-  font-size: 1px
   text-align: justify
 
   /* Добавляем пустой псевдоэлемент в поток списка, чтобы сработал `text-align: justify` */
@@ -104,9 +107,6 @@ h1
     color: $color_pink
     font-size: $quality__fontSize
     line-height: $quality__lineHeight
-
-    & + &
-      margin-left: 5px
 
 /* Нумерованный список */
 .listBlock
