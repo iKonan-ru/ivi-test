@@ -1,0 +1,49 @@
+ellipsis($linesCount, $lineHeight)
+  $maxHeight = $linesCount * $lineHeight
+
+  nonWebkit()
+    $ellipsis__width = 1em
+
+    &
+      text-align: justify
+      padding-right: $ellipsis__width
+
+    &::before
+      content: ''
+      width: $ellipsis__width
+      height: $maxHeight
+      float: left
+
+    & > *:first-child
+      width: 100%
+      float: right
+      margin-left: -($ellipsis__width)
+
+    &::after
+      content: '...'
+      float: right
+      position: relative
+      text-align: right
+      top: -($lineHeight)
+      left: 100%
+      width: $ellipsis__width
+
+  &
+    display: block
+    overflow: hidden
+    max-height: $maxHeight
+
+  /* Стили для Webkit-браузеров */
+  @media screen and (-webkit-min-device-pixel-ratio: 0)
+    display: -webkit-box
+    -webkit-line-clamp: $topBlock__title__lineCount
+    -webkit-box-orient: vertical
+    text-overflow: ellipsis
+
+  /* Стили для браузеров, не поддерживающих свойство `-webkit-line-clamp`: Firefox, Opera <= 12 и т.д. */
+  @supports not (-webkit-line-clamp: $topBlock__title__lineCount)
+    nonWebkit()
+
+  /* Стили для Internet Explorer */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    nonWebkit()

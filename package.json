@@ -1,0 +1,25 @@
+{
+  "name": "ivi-test",
+  "version": "1.0.0",
+  "description": "HTML test in IVI",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-stylus": "^2.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iKonan-ru/ivi-test.git"
+  },
+  "author": "ekononenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iKonan-ru/ivi-test/issues"
+  },
+  "homepage": "https://github.com/iKonan-ru/ivi-test"
+}
