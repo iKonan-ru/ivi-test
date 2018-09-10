@@ -1,0 +1,11 @@
+$topBlock__width_max = 800px
+$topBlock__height_max = 400px
+$topBlock__skew__angle = 45deg
+$topBlock__skew__width = tan($topBlock__skew__angle) * ($topBlock__height_max / 2)
+$topBlock__skew__width_max = 120px
+$topBlock__title__lineCount = 2
+$topBlock__pad = 10px
+
+/* Функция для вычисления процентного размера относительно ширины блока */
+topBlock__percentage($elementSize)
+  percentage($elementSize / $topBlock__width_max)

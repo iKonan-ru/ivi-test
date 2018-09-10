@@ -7,7 +7,7 @@ let gulp = require('gulp'),
     gulpSequence = require('gulp-sequence');
 
 gulp.task('css', () => {
-    return gulp.src('./src/stylesheets/styles.styl')
+    return gulp.src('./src/stylesheets/main.styl')
         .pipe(stylus({
             use: [autoprefixer({
                 browsers: [

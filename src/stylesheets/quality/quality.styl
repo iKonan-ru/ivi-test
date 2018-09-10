@@ -1,0 +1,20 @@
+@import '../_vars.styl'
+
+.quality
+  height: $quality__height
+  text-align: justify
+
+  /* Добавляем пустой псевдоэлемент в поток списка, чтобы сработал `text-align: justify` */
+  &::after
+    content: ''
+    width: 100%
+    display: inline-block
+
+  &__item
+    display: inline-block
+    vertical-align: top
+    padding: $quality__pad_y $quality__pad_x
+    background-color: $color_white
+    color: $color_pink
+    font-size: $quality__fontSize
+    line-height: $quality__lineHeight

@@ -1,0 +1,46 @@
+@import '../_vars.styl'
+
+.listBlock
+
+  &__list
+    display: table
+    width: 100%
+    counter-reset: listBlock
+
+  &__item
+    display: table-row
+    font-size: 16px
+    line-height: 20px
+
+    & + &::before
+      margin-top: $listBlock__items__gax_x
+
+    & + & > &Text
+      padding-top: $listBlock__items__gax_x
+
+    /* Стили нумерации списка */
+    &::before
+      /* Используем возможности свойства `content` для нумерации списка */
+      counter-increment: listBlock
+      content: counter(listBlock)
+      display: block
+      width: 50px
+      height: @width
+      box-sizing: border-box
+      margin-right: 10px
+      border-radius: 50%
+      text-align: center
+      font-size: 28px
+      line-height: 30px
+      color: $color_white
+      padding-top: floor((@height - @line-height) / 2)
+      padding-bottom: ceil((@height - @line-height) / 2)
+      background-color: $color_pink
+
+    /* Стили текстового блока в пунктах списка */
+    &Text
+      display: table-cell
+      vertical-align: middle
+      width: 100%
+      margin-left: 10px
+      color: $color_black

@@ -1,0 +1,12 @@
+@import '../_vars.styl'
+
+.page
+  width: 75%
+  max-width: $page__maxWidth
+  min-width: $page__minWidth
+  margin-left: auto
+  margin-right: auto
+
+  /* Отступы между основными секциями страницы */
+  & > * + *
+    margin-top: 20px
